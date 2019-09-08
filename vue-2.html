@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue">
+    </script>
+</head>
+
+<body>
+    <div id="app">
+        {{ message }}
+    </div> <br>
+    <div id="app-2">
+        <span v-bind:title="message">
+            Hover your mouse over me for a few seconds
+            to see my dynamically bound title!
+        </span>
+    </div>
+    <br>
+    <!--content delivery network, not very flexible, will do at the moment-->
+    <!--https://scrimba.com/p/pXKqta/cQ3QVcr-->
+
+    <!-- v- is a directive-->
+    <div id="app-3">
+        <span v-if="seen">Hello again!</span>
+    </div>
+    <br>
+    <div id="app-4">
+        <ol>
+            <li v-for="taak in opdrachten">
+                {{taak.text}}</li>
+        </ol>
+    </div>
+
+    <!--app4.opdrachten.push({ text: 'Krijg een promotie' })-->
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue!'
+            }
+        });
+        var app2 = new Vue({
+            el: '#app-2',
+            data: {
+                message: 'Hello Vue!' + new Date().toLocaleString()
+            }
+        })
+        var app3 = new Vue({
+            el: '#app-3',
+            data: {
+                seen: true
+            }
+        })
+        var app4 = new Vue({
+            el: '#app-4',
+            data: {
+                opdrachten: [{
+                        text: 'Leer JavaScript'
+                    },
+                    {
+                        text: 'Leer Vue'
+                    },
+                    {
+                        text: 'Teken een arbeidscontract'
+                    }
+                ]
+            }
+        })
+    </script>
+</body>
+
+</html>

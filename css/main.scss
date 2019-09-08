@@ -1,0 +1,20 @@
+$mycolor: lime;
+
+
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0px;
+    background: $mycolor;
+
+    #bg {
+        clip-path: polygon(100% 0, 100% 49%, 100% 52%, 50% 100%, 0 100%, 0 0);
+        color: map-get($colors, #005DFF);
+    }
+}
+
+
+$colors: (primary: #005DFF, accent: #FFF6BB, text: gray);
+
+h1 {
+    color: map-get($colors, accent);
+}
