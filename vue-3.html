@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue">
+    </script>
+</head>
+
+<body>
+    <!--pas op met spaties voor en na de :-->
+    <div id="app-5">
+        {{ message }}
+        <input v-model="message" type="text" name="Word" id="wordId">
+        <button id="" v-on:click="reverseMessage">keer boodscap om</button>
+        <p id="demo"></p>
+    </div> <br>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("wordId").value;
+            document.getElementById("demo").innerHTML = x;
+        }
+
+
+        var app5 = new Vue({
+            el: '#app-5',
+            data: {
+                //message: document.getElementById("wordId").value zie lijn 17
+                message: ''
+            },
+            methods: {
+                reverseMessage: function () {
+                    this.message = this.message.split('').reverse().join('')
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

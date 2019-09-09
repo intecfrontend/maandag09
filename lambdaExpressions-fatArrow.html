@@ -1,58 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-  </head>
-  <body>
-    <script>
-      var x = 1;
 
-      if (x === 1) {
-        var x = 2;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+</head>
 
-        console.log(x);
-      }
+<body>
+  <script>
+    /*
+    let x = 1;
+
+    if (x === 1) {
+      let x = 2;
       console.log(x);
 
-      console.log("-----------------------------------");
+    }
+    console.log(x);
 
-      let geta = function(a) {
-        return a;
-      };
+    console.log("-----------------------------------");
+   
+    let geta = function (a) {
+      return a;
+    };
 
-      let getb = b => b;
-      console.log(geta(2));
-      console.log(getb(3));
+    let getb = b => b;
+    console.log(geta(2));
+    console.log(getb(3));
 
-      console.log("-----------------------------------");
-      let squarea = a => a * a;
-      let squareb = b => {
-        return b * b;
-      };
-      console.log(squarea(2));
-      console.log(squareb(3));
+    console.log("-----------------------------------");
+    
+    let squarea = a => {
+      return a * a;
+    };
+    let squareb = b => b * b;
 
-      console.log("---------------this-----------------");
-      var x = function() {
-        this.val = 1;
-        setTimeout(() => {
-          this.val++;
-          console.log(this.val);
-        }, 1);
-      };
-      console.log(x());
-      console.log("------------------------------------");
-      var x = function() {
-        console.log(arguments[0] + "first");
-      };
-      x(1, 2, 3);
-      var x = (...n) => {
-        console.log(n[0] + "second");
-      };
-      x(4, 5, 6, 7);
-    </script>
-  </body>
+
+
+    console.log(squarea(2));
+    console.log(squareb(3));
+
+    console.log("---------------this-----------------");
+
+    var x = function () {
+      this.val = 1;
+      setTimeout(() => {
+        this.val++;
+        console.log(this.val);
+      }, 1);
+    };
+    console.log(x());
+    console.log("------------------------------------");
+    */
+    var x = function () {
+      console.log(arguments[0] + "first");
+    };
+    x(1, 2, 3);
+
+    var x = (...n) => {
+      console.log(n[0] + "second");
+    };
+
+    x(4, 5, 6, 7);
+  
+  </script>
+</body>
+
 </html>
