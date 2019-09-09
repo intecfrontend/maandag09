@@ -41,7 +41,7 @@
 
     console.log(squarea(2));
     console.log(squareb(3));
-
+*/
     console.log("---------------this-----------------");
 
     var x = function () {
@@ -50,10 +50,12 @@
         this.val++;
         console.log(this.val);
       }, 1);
+      console.log(this.val);
     };
-    console.log(x());
+    x();
+    //console.log(x());
     console.log("------------------------------------");
-    */
+    /*
     var x = function () {
       console.log(arguments[0] + "first");
     };
@@ -63,8 +65,7 @@
       console.log(n[0] + "second");
     };
 
-    x(4, 5, 6, 7);
-  
+    x(4, 5, 6, 7);*/
   </script>
 </body>
 
